@@ -4,6 +4,14 @@
 
 [作业](http://www.cnblogs.com/silent-zlv/p/8684979.html)
 
+## 使用方法
+
+头文件: dll.h
+
+链接库: 
+* x64: x64/Core.lib, x64/Core.dll
+* x86: x86/Core.lib, x86/Core.dll
+
 ## API
 
 ### void set(int num_max, int num_limit, int exp_num, int type = 0, int precision = 2);
