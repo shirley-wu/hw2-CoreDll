@@ -23,7 +23,7 @@
 * 以上几个设置项中，假如有某项的值不在有效范围内，该项不进行设置。
 
 ### void set_precision(int precision);
-设置小数精度，默认2，有效范围1 ~ INT_MAX。假如值不在有小范围内，不进行设置。
+设置小数精度，默认2，有效范围1 ~ INT_MAX。假如值不在有效范围内，不进行设置。
 
 ### void set_opr(bool add, bool sub, bool mul, bool div, bool pow);
 设置各个操作符是否可用。默认add, sub, mul, div可用，pow不可用。至少有一个为true才有效。假如全为false，不进行修改。
