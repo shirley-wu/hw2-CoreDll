@@ -1,4 +1,4 @@
-# hw2-CoreDll
+﻿# hw2-CoreDll
 
 [Core代码](https://github.com/shirley-wu/hw2-Core)
 
@@ -15,17 +15,18 @@
 ## API
 
 ### void set(int num_max, int num_limit, int exp_num, int type = 0, int precision = 2);
-* num_max: 操作数的最大值，默认1000
-* num_limit: 操作数最大个数，默认20
-* exp_num: 表达式个数，默认5
-* type: 操作数类型，0 double, 1 int, 2 fraction，默认double
-* precision: 小数精度，默认2
+* num_max: 操作数的最大值，默认1000，有效范围1 ~ INT_MAX
+* num_limit: 操作数最大个数，默认20，有效范围1 ~ INT_MAX
+* exp_num: 表达式个数，默认5，有效范围1 ~ INT_MAX
+* type: 操作数类型，有效范围0 double, 1 int, 2 fraction，默认double
+* precision: 小数精度，默认2，有效范围1 ~ INT_MAX
+* 以上几个设置项中，假如有某项的值不在有效范围内，该项不进行设置。
 
 ### void set_precision(int precision);
-设置小数精度，默认2
+设置小数精度，默认2，有效范围1 ~ INT_MAX。假如值不在有小范围内，不进行设置。
 
 ### void set_opr(bool add, bool sub, bool mul, bool div, bool pow);
-设置各个操作符是否可用。默认add, sub, mul, div可用，pow不可用
+设置各个操作符是否可用。默认add, sub, mul, div可用，pow不可用。至少有一个为true才有效。假如全为false，不进行修改。
 
 ### void set_power_signal(bool s);
 设置乘方符号的显示方式。true ^, false **。默认true
