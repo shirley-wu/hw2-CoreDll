@@ -40,5 +40,11 @@
 ### bool get_exp(int i, std::string& s, std::string& result);
 通过下标 i 获取表达式与结果。s为表达式，result为结果。返回值表示能否成功获取，一般只要下标没越界、内存没崩，就不会返回false。
 
+### bool exp_to_file(const char* dir);
+将所有表达式写入一个文件，各个式子之间以'\n'分隔。dir为表达式目标文件的绝对路径，如"D:\\Users\\wu-pc\\repos\\hw2\\expression.txt"。返回值表示是否成功；若文件操作错误，或尚未生成任何式子，返回false。__注：C盘有可能会因为权限不够无法生成文件。__
+
+### bool ans_to_file(const char* dir);
+将所有答案写入一个文件，类似exp_to_file。
+
 ### 另：
 假如ui发现了什么bug或者需要什么别的设置可以告诉我们~
