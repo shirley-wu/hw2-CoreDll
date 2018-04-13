@@ -44,10 +44,10 @@
 ### bool get_exp(int i, std::string& s, std::string& result);
 通过下标 i 获取第i个表达式与结果。s为表达式，result为结果。返回值表示能否成功获取，一般只要下标没越界、内存没崩，就不会返回false。
 
-### bool get_exp(int i, char* s, int size);
+### bool get_expression(int i, char* s, int size);
 通过下标 i 获取第i个表达式。s为char数组指针，size为数组大小。返回值表示能否成功获取。若返回false，可能是因为下标i越界或数组容量不够。
 
-### bool get_exp(int i, char* s, int size);
+### bool get_answer(int i, char* s, int size);
 通过下标 i 获取第i个结果。s为char数组指针，size为数组大小。返回值表示能否成功获取。若返回false，可能是因为下标i越界或数组容量不够。
 
 ### bool exp_to_file(const char* dir);
