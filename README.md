@@ -2,6 +2,8 @@
 
 [Core代码](https://github.com/shirley-wu/hw2-Core)
 
+[Core ddl](https://github.com/shirley-wu/hw2-CoreDll)
+
 [作业](http://www.cnblogs.com/silent-zlv/p/8684979.html)
 
 ## 使用方法
