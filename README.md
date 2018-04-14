@@ -44,13 +44,13 @@
 清除生成的表达式。（在运行过程中这个可以不用调用，因为generate的时候会自动调用clear，清除之前生成的表达式。__但是退出的时候请调用！！！不然内存就占那里了！！！__）
 
 ### bool get_exp(int i, std::string& s, std::string& result);
-通过下标 i 获取第i个表达式与结果。s为表达式，result为结果。返回值表示能否成功获取，一般只要下标没越界、内存没崩，就不会返回false。
+通过下标 i 获取第i个表达式与结果，i范围为0 ~ 表达式个数-1。s为表达式，result为结果。返回值表示能否成功获取，一般只要下标没越界、内存没崩，就不会返回false。
 
 ### bool get_expression(int i, char* s, int size);
-通过下标 i 获取第i个表达式。s为char数组指针，size为数组大小。返回值表示能否成功获取。若返回false，可能是因为下标i越界或数组容量不够。
+通过下标 i 获取第i个表达式，i范围为0 ~ 表达式个数-1。s为表达式。s为char数组指针，size为数组大小。返回值表示能否成功获取。若返回false，可能是因为下标i越界或数组容量不够。
 
 ### bool get_answer(int i, char* s, int size);
-通过下标 i 获取第i个结果。s为char数组指针，size为数组大小。返回值表示能否成功获取。若返回false，可能是因为下标i越界或数组容量不够。
+通过下标 i 获取第i个结果，i范围为0 ~ 表达式个数-1。s为表达式。s为char数组指针，size为数组大小。返回值表示能否成功获取。若返回false，可能是因为下标i越界或数组容量不够。
 
 ### bool exp_to_file(const char* dir);
 将所有表达式写入一个文件，各个式子之间以'\n'分隔。dir为表达式目标文件的绝对路径，如"D:\\Users\\wu-pc\\repos\\hw2\\expression.txt"。返回值表示是否成功；若文件操作错误，或尚未生成任何式子，返回false。__注：C盘有可能会因为权限不够无法生成文件。__
